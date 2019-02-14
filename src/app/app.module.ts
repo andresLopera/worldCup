@@ -6,10 +6,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { GoalshigherComponent } from './goalshigher/goalshigher.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GoalshigherComponent
   ],
   imports: [
     BrowserModule,

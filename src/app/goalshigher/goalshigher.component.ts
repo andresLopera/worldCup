@@ -1,25 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import * as echarts from 'echarts';
 
-declare const require: any;
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-goalshigher',
+  templateUrl: './goalshigher.component.html',
+  styleUrls: ['./goalshigher.component.css']
 })
-export class AppComponent {
+export class GoalshigherComponent implements OnInit {
 
   // show loading spinner:
   mapLoaded = false;
   // empty option before geoJSON loaded:
   options = {};
 
-  constructor(private http: Http) { }
+  constructor(
+    private http: Http
+  ) { }
 
   ngOnInit() {
-    this.getData();
   }
 
   loadMap(winner) {
@@ -294,4 +293,5 @@ export class AppComponent {
       }
     );
   }
+
 }
